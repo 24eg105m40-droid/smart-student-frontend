@@ -433,7 +433,7 @@
             // UPDATE
             if (editingStudentId !== null) {
 
-                response = await fetch("/students/" + editingStudentId, {
+                response = await fetch("https://smart-student-backend-mgrj.onrender.com/students/" + editingStudentId, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json"
@@ -456,7 +456,7 @@
             // REGISTER
             else {
 
-                response = await fetch("/students", {
+                response = await fetch("https://smart-student-backend-mgrj.onrender.com/students", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -499,7 +499,7 @@
 
         try {
 
-            const response = await fetch("/students");
+            const response = await fetch("https://smart-student-backend-mgrj.onrender.com/students");
 
 if (!response.ok) {
     throw new Error("Failed to load students");
@@ -579,7 +579,7 @@ tableBody.innerHTML = "";
 
         try {
 
-            const response = await fetch("/students/" + id);
+            const response = await fetch("https://smart-student-backend-mgrj.onrender.com/students/" + id);
 
             if (!response.ok) {
                 throw new Error("Student not found");
@@ -653,7 +653,7 @@ tableBody.innerHTML = "";
 
         try {
 
-            const response = await fetch("/students/" + id, {
+            const response = await fetch("https://smart-student-backend-mgrj.onrender.com/students/" + id, {
                 method: "DELETE"
             });
 
